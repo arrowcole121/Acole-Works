@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Game Opener</title>
+  <script>
+    function openRandomWebsite() {
+      var websites = [
+        'https://games.acole.xyz/rows/first-row/smash-the-walls',
+        'https://games.acole.xyz/rows/first-row/doge',
+        'https://games.acole.xyz/rows/first-row/mine-sweeper',
+        'https://games.acole.xyz/rows/first-row/that-one-finger',
+        'https://games.acole.xyz/rows/second-row/check-box-race',
+        'https://games.acole.xyz/rows/second-row/move-now-think-later',
+        'https://games.acole.xyz/rows/second-row/cat-bounce',
+        'https://games.acole.xyz/rows/second-row/man-in-the-dark',
+        'https://games.acole.xyz/rows/third-row/koalas-to-the-max',
+        'https://games.acole.xyz/rows/third-row/hacker-typer',
+        'https://games.acole.xyz/rows/third-row/pointer',
+        'https://games.acole.xyz/rows/third-row/yesnoif',
+        'https://games.acole.xyz/rows/fourth-row/move-block-around',
+        'https://games.acole.xyz/rows/fourth-row/snowman',
+        'https://games.acole.xyz/rows/fourth-row/boring',
+        'https://games.acole.xyz/rows/fourth-row/cross-division',
+        'https://games.acole.xyz/rows/fifth-row/dog-be-spinning',
+        'https://games.acole.xyz/rows/fifth-row/double-pressure',
+        'https://games.acole.xyz/rows/fifth-row/infinity',
+        'https://games.acole.xyz/rows/fifth-row/pug-in-a-rug',
+        'https://games.acole.xyz/rows/sixth-row/cursor-effect',
+        'https://games.acole.xyz/rows/sixth-row/box-maker',
+        'https://games.acole.xyz/rows/sixth-row/maze',
+        'https://games.acole.xyz/rows/sixth-row/i-has-a-bucket',
+        'https://games.acole.xyz/rows/seventh-row/never-ending-clicker',
+        'https://games.acole.xyz/rows/seventh-row/guess-the-number',
+        'https://games.acole.xyz/rows/seventh-row/rps',
+        'https://games.acole.xyz/rows/seventh-row/ping-pong',
+        'https://games.acole.xyz/rows/eighth-row/baby-1',
+        'https://games.acole.xyz/rows/eighth-row/baby-2',
+        'https://games.acole.xyz/rows/eighth-row/baby-3',
+        'https://games.acole.xyz/rows/eighth-row/baby-4',
+        'https://games.acole.xyz/rows/ninth-row/baby-5',
+        'https://games.acole.xyz/rows/ninth-row/baby-6',
+        'https://games.acole.xyz/rows/ninth-row/baby-7',
+        'https://games.acole.xyz/rows/ninth-row/baby-8',
+        'https://games.acole.xyz/rows/tenth-row/baby-9',
+        'https://games.acole.xyz/rows/tenth-row/baby-10',
+        'https://games.acole.xyz/rows/tenth-row/clicker-game',
+        'https://games.acole.xyz/rows/tenth-row/no',
+        'https://games.acole.xyz/rows/eleventh-row/deep-rock-galactic',
+        'https://games.acole.xyz/rows/eleventh-row/mystery-button',
+        'https://games.acole.xyz/rows/eleventh-row/magic-8-ball',
+        'https://games.acole.xyz/rows/eleventh-row/hunger-games',
+        'https://games.acole.xyz/rows/twelfth-row/hungry-games',
+        'https://games.acole.xyz/rows/twelfth-row/clicker-2',
+        'https://games.acole.xyz/rows/twelfth-row/rr',
+        'https://games.acole.xyz/rows/twelfth-row/memory-game',
+        'https://games.acole.xyz/rows/thirteenth-row/magic',
+        'https://games.acole.xyz/rows/thirteenth-row/sp1',
+        'https://games.acole.xyz/rows/thirteenth-row/sp2',
+        'https://games.acole.xyz/rows/thirteenth-row/uno',
+        'https://games.acole.xyz/rows/fourteenth/hi',
+        'https://games.acole.xyz/rows/fourteenth/quiz',
+        'https://games.acole.xyz/rows/fourteenth/gay',
+        'https://games.acole.xyz/rows/fourteenth/paperclip-clicker',
+        'https://games.acole.xyz/rows/fifteenth/rgb',
+        'https://games.acole.xyz/rows/fifteenth/noice',
+        'https://games.acole.xyz/rows/fifteenth/emoji',
+        'https://games.acole.xyz/rows/fifteenth/falling-falling',
+        'https://games.acole.xyz/rows/sixteenth/wordle',
+        'https://games.acole.xyz/rows/sixteenth/4060',
+        'https://games.acole.xyz/rows/sixteenth/solitare',
+        'https://games.acole.xyz/rows/sixteenth/calculator-the-game',
+        'https://games.acole.xyz/rows/seventeenth/pico-park',
+        'https://games.acole.xyz/rows/seventeenth/black-jack',
+        'https://games.acole.xyz/rows/seventeenth/tetris',
+        'https://games.acole.xyz/rows/seventeenth/dominoes',
+        'https://games.acole.xyz/rows/eighteenth/spacelichomega2',
+        'https://games.acole.xyz/rows/eighteenth/one-dot',
+        'https://games.acole.xyz/rows/eighteenth/dino',
+        'https://games.acole.xyz/rows/eighteenth/google-feud',
+        'https://games.acole.xyz/rows/nineteenth-row/logo',
+        'https://games.acole.xyz/rows/nineteenth-row/rings',
+        'https://games.acole.xyz/rows/nineteenth-row/wtf',
+        'https://games.acole.xyz/rows/nineteenth-row/the-zen',
+        'https://games.acole.xyz/rows/twentieth/he-ho',
+        'https://games.acole.xyz/rows/twentieth/find-the-cow',
+        'https://games.acole.xyz/rows/twentieth/redblue',
+        'https://games.acole.xyz/rows/twentieth/drawing',
+        // Add more websites as needed
+        <!--Use this for adding games (        '',) -->
+      ];
+
+      // Shuffle the array to get a random order
+      websites.sort(function() {
+        return 0.5 - Math.random();
+      });
+
+      // Open the websites in random order
+      for (var i = 0; i < websites.length; i++) {
+        tab.open(websites[i]);
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>Random Game Opener</h1>
+  <button onclick="openRandomWebsite()">Open Games</button>
+</body>
+</html>
