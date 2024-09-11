@@ -1,0 +1,36 @@
+---
+# front matter is required for jekyll processing
+---
+<html>
+    <head>
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="viewport" content="user-scalable=0"> 
+
+        {% capture styles %}
+            {% include assets/stylesheets/style.css %}
+            {% include assets/stylesheets/slider.css %}
+            {% include assets/stylesheets/fa-solid-min.css %}
+        {% endcapture %}
+        <style>{{ styles | scssify | strip}}</style>
+        {% capture scripts %}
+            {% include assets/javascripts/lib/jquery-3.3.1.min.js %}
+            {% include assets/javascripts/lib/paho-mqtt-min.js %}
+            {% include assets/javascripts/navigation.js %}
+            {% include assets/javascripts/application.js %}
+            {% include assets/javascripts/summary.js %}
+            {% include assets/javascripts/mqtt.js %}
+        {% endcapture %}
+        <script>{{ scripts | uglify | strip }}</script>
+    </head>
+    <body>
+        <div id="error-banner" style="display: none;">Error: Lost Connection to FMS</div>
+        {% include _auto.html %}
+        {% include _teleop.html %}
+        {% include _endgame.html %}
+        {% include _summary.html %}
+        {% include _choose_alliance.html %}
+        {% include _waiting.html %}
+        {% include _help.html %}
+    </body>
+</html>
